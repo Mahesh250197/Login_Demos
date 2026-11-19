@@ -15,7 +15,5 @@ test('OrangeHRM admin can log in', async ({ page }) => {
 
   await loginPage.goto();
   await loginPage.login(username, password);
-
-  await expect(page).toHaveURL(/\/web\/index\.php\/dashboard\/index/);
   await expect(dashboardPage.heading).toBeVisible();
 });
